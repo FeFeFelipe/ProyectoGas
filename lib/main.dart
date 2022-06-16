@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(brightness: Brightness.light),
       darkTheme: ThemeData(brightness: Brightness.dark),
       themeMode: _themeMode,
-      home: NavBarPage(),
+      home: IngusuarioWidget(),
     );
   }
 }
@@ -89,7 +89,7 @@ class _NavBarPageState extends State<NavBarPage> {
         currentIndex: currentIndex,
         onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
         backgroundColor: Colors.white,
-        selectedItemColor: Color(0x00000000),
+        selectedItemColor: Colors.black,
         unselectedItemColor: Color(0x00000000),
         selectedBackgroundColor: Color(0x00000000),
         borderRadius: 8,
@@ -105,17 +105,14 @@ class _NavBarPageState extends State<NavBarPage> {
               children: [
                 Icon(
                   Icons.home_outlined,
-                  color:
-                      currentIndex == 0 ? Color(0x00000000) : Color(0x00000000),
+                  color: currentIndex == 0 ? Colors.black : Color(0x00000000),
                   size: 24,
                 ),
                 Text(
                   'Inicio',
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    color: currentIndex == 0
-                        ? Color(0x00000000)
-                        : Color(0x00000000),
+                    color: currentIndex == 0 ? Colors.black : Color(0x00000000),
                     fontSize: 11.0,
                   ),
                 ),
@@ -128,17 +125,14 @@ class _NavBarPageState extends State<NavBarPage> {
               children: [
                 Icon(
                   Icons.store,
-                  color:
-                      currentIndex == 1 ? Color(0x00000000) : Color(0x00000000),
+                  color: currentIndex == 1 ? Colors.black : Color(0x00000000),
                   size: 24,
                 ),
                 Text(
                   'Sucursales',
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    color: currentIndex == 1
-                        ? Color(0x00000000)
-                        : Color(0x00000000),
+                    color: currentIndex == 1 ? Colors.black : Color(0x00000000),
                     fontSize: 11.0,
                   ),
                 ),
@@ -151,17 +145,14 @@ class _NavBarPageState extends State<NavBarPage> {
               children: [
                 Icon(
                   Icons.person,
-                  color:
-                      currentIndex == 2 ? Color(0x00000000) : Color(0x00000000),
+                  color: currentIndex == 2 ? Colors.black : Color(0x00000000),
                   size: 24,
                 ),
                 Text(
                   'Cuenta',
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    color: currentIndex == 2
-                        ? Color(0x00000000)
-                        : Color(0x00000000),
+                    color: currentIndex == 2 ? Colors.black : Color(0x00000000),
                     fontSize: 11.0,
                   ),
                 ),
