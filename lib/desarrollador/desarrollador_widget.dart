@@ -4,14 +4,14 @@ import '../main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DesarrolladorWidget extends StatefulWidget {
-  const DesarrolladorWidget({Key key}) : super(key: key);
+class DesarolladorWidget extends StatefulWidget {
+  const DesarolladorWidget({Key key}) : super(key: key);
 
   @override
-  _DesarrolladorWidgetState createState() => _DesarrolladorWidgetState();
+  _DesarolladorWidgetState createState() => _DesarolladorWidgetState();
 }
 
-class _DesarrolladorWidgetState extends State<DesarrolladorWidget> {
+class _DesarolladorWidgetState extends State<DesarolladorWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -70,6 +70,19 @@ class _DesarrolladorWidgetState extends State<DesarrolladorWidget> {
                   style: FlutterFlowTheme.of(context).bodyText1,
                 ),
               ),
+              Container(
+                width: 150,
+                height: 150,
+                decoration: BoxDecoration(
+                  color: Color(0xFFEEEEEE),
+                ),
+                child: Image.network(
+                  'https://github.com/FeFeFelipe/imagenes/blob/main/287723557_1089817671881021_8841905331632437692_n.jpg?raw=true',
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ],
           ),
         ),
@@ -77,3 +90,4 @@ class _DesarrolladorWidgetState extends State<DesarrolladorWidget> {
     );
   }
 }
+
