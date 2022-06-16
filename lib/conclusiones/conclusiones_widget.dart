@@ -1,0 +1,83 @@
+import '../cuenta/cuenta_widget.dart';
+import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class ConclusionesWidget extends StatefulWidget {
+  const ConclusionesWidget({Key key}) : super(key: key);
+
+  @override
+  _ConclusionesWidgetState createState() => _ConclusionesWidgetState();
+}
+
+class _ConclusionesWidgetState extends State<ConclusionesWidget> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        automaticallyImplyLeading: false,
+        title: Align(
+          alignment: AlignmentDirectional(0, 0),
+          child: Text(
+            'Conclusiones',
+            textAlign: TextAlign.center,
+            style: FlutterFlowTheme.of(context).title2.override(
+                  fontFamily: 'Roboto',
+                  color: Color(0xFFC80000),
+                  fontSize: 30,
+                ),
+          ),
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
+            child: InkWell(
+              onTap: () async {
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CuentaWidget(),
+                  ),
+                );
+              },
+              child: Icon(
+                Icons.keyboard_backspace,
+                color: Colors.black,
+                size: 24,
+              ),
+            ),
+          ),
+        ],
+        centerTitle: false,
+        elevation: 2,
+      ),
+      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      body: SafeArea(
+        child: GestureDetector(
+          onTap: () => FocusScope.of(context).unfocus(),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Color(0xFFEEEEEE),
+                ),
+                child: Text(
+                  'La programacion es un sistema tan versatil y estructural, que realmente conociendo y dominando las bases de esta, se puede aprender culquier lenguaje de programacion y todo lo que tenga que ver con esete puediendo adaptarse con ayuda de herramientas a los complejas \'\' realidades\'\' (no supe como definirlo) que se crean gracias a la programacion la cual esta cambiando todo',
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.of(context).bodyText1,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
